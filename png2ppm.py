@@ -31,6 +31,6 @@ if __name__ == "__main__":
         outname, _ = os.path.splitext(fname)
         outname = outp+outname[3:]
         print (outname)
-        os.system("convert.exe %s %s.ppm"%(fname, outname))
-        os.system("convert.exe %s -channel A -separate %s.pgm"%(fname, outname))
+        os.system('convert.exe "%s" "%s.ppm"'%(fname, outname))
+        os.system('convert.exe "%s" -channel A -separate "%s.pgm"'%(fname, outname))
     os.system("pause")
